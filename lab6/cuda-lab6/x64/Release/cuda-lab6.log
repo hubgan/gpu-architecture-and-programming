@@ -1,0 +1,21 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\Hubert\source\repos\cuda-lab6>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"     --keep-dir cuda-lab6\x64\Release  -maxrregcount=0    --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/Fdcuda-lab6\x64\Release\vc143.pdb" -o C:\Users\Hubert\source\repos\cuda-lab6\cuda-lab6\x64\Release\kernel.cu.obj "C:\Users\Hubert\source\repos\cuda-lab6\kernel.cu" 
+C:\Users\Hubert\source\repos\cuda-lab6\kernel.cu(51): error : kernel launch from __device__ or __global__ functions requires separate compilation mode
+            qsort << <1, 1, 0, s1 >> > (data, l, rx);
+            ^
+  
+C:\Users\Hubert\source\repos\cuda-lab6\kernel.cu(55): error : kernel launch from __device__ or __global__ functions requires separate compilation mode
+            qsort << <1, 1, 0, s2 >> > (data, lx, r);
+            ^
+  
+C:\Users\Hubert\source\repos\cuda-lab6\kernel.cu(64): warning #177-D: variable "wynik" was declared but never referenced
+        int* wynik;
+             ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+  2 errors detected in the compilation of "C:/Users/Hubert/source/repos/cuda-lab6/kernel.cu".
+CUDACOMPILE : nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  kernel.cu
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\CUDA 12.8.targets(800,9): error MSB3721: Polecenie "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"     --keep-dir cuda-lab6\x64\Release  -maxrregcount=0    --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/Fdcuda-lab6\x64\Release\vc143.pdb" -o C:\Users\Hubert\source\repos\cuda-lab6\cuda-lab6\x64\Release\kernel.cu.obj "C:\Users\Hubert\source\repos\cuda-lab6\kernel.cu" zostało zakończone; kod błędu: 1.
